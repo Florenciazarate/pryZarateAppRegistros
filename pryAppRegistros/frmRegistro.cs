@@ -16,5 +16,22 @@ namespace pryAppRegistros
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstProducto.Text != "")
+                {
+                lblCantidad.Enabled = true;
+                 }
+            else
+                {
+                lblCantidad.Enabled = false;
+                }
+        }
     }
 }
