@@ -25,13 +25,30 @@ namespace pryAppRegistros
         private void lstProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstProducto.Text != "")
-                {
-                lblCantidad.Enabled = true;
-                 }
+            {
+                lstCantidad.Enabled = true;
+            }
             else
-                {
-                lblCantidad.Enabled = false;
-                }
+            {
+                lstCantidad.Enabled = false;
+            }
+        }
+        DateTime vFecha;
+        String vProducto;
+        int vCantidad;
+        int vPrecioUnitario;
+
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            vFecha = dateFecha.Value;
+            vProducto = lstProducto.Text;
+            vCantidad = Convert.ToInt32 (lstCantidad.Value) ;
+            vPrecioUnitario = Convert.ToInt32 (txtPrecioU.Text);
+            lblResultado.Text= 
+                vFecha.ToString () + " - "  + vProducto
+                + vCantidad.ToString () + " - "
+                + vPrecioUnitario.ToString();
         }
     }
 }
