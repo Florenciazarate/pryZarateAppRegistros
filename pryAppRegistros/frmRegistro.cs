@@ -22,17 +22,7 @@ namespace pryAppRegistros
 
         }
 
-        private void lstProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lstProducto.Text != "")
-            {
-                lstCantidad.Enabled = true;
-            }
-            else
-            {
-                lstCantidad.Enabled = false;
-            }
-        }
+
         DateTime vFecha;
         String vProducto;
         int vCantidad;
@@ -43,12 +33,26 @@ namespace pryAppRegistros
         {
             vFecha = dateFecha.Value;
             vProducto = lstProducto.Text;
-            vCantidad = Convert.ToInt32 (lstCantidad.Value) ;
-            vPrecioUnitario = Convert.ToInt32 (txtPrecioU.Text);
-            lblResultado.Text= 
-                vFecha.ToString () + " - "  + vProducto
-                + vCantidad.ToString () + " - "
+            vCantidad = Convert.ToInt32(lstCantidad.Value);
+            vPrecioUnitario = Convert.ToInt32(txtPrecioU.Text);
+            lblResultado.Text =
+                vFecha.ToString() + " - " + vProducto + " - "
+                + vCantidad.ToString() + " - "
                 + vPrecioUnitario.ToString();
         }
+
+        private void lstProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (lstProducto.Text != "")
+            {
+                lstCantidad.Enabled = true;
+            }
+            else
+            {
+                lstCantidad.Enabled = false;
+            }
+        }
+
+
+        }
     }
-}

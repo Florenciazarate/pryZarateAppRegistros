@@ -151,17 +151,19 @@
             lstProducto.Name = "lstProducto";
             lstProducto.Size = new Size(146, 23);
             lstProducto.TabIndex = 13;
-            lstProducto.SelectedIndexChanged += lstProducto_SelectedIndexChanged;
+            lstProducto.TextChanged += lstProducto_TextChanged;
             // 
             // lblResultado
             // 
             lblResultado.AutoSize = true;
-            lblResultado.Font = new Font("Nirmala UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblResultado.Location = new Point(54, 270);
+            lblResultado.BackColor = Color.PaleGoldenrod;
+            lblResultado.BorderStyle = BorderStyle.FixedSingle;
+            lblResultado.FlatStyle = FlatStyle.Flat;
+            lblResultado.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblResultado.Location = new Point(54, 276);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(25, 13);
+            lblResultado.Size = new Size(2, 17);
             lblResultado.TabIndex = 14;
-            lblResultado.Text = "Res";
             // 
             // frmRegistro
             // 
