@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistro));
             btnAceptar = new Button();
             lblPrincipal = new Label();
             lblFecha = new Label();
@@ -63,9 +64,9 @@
             lblPrincipal.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPrincipal.Location = new Point(54, 24);
             lblPrincipal.Name = "lblPrincipal";
-            lblPrincipal.Size = new Size(97, 30);
+            lblPrincipal.Size = new Size(78, 30);
             lblPrincipal.TabIndex = 2;
-            lblPrincipal.Text = "Kioscubi";
+            lblPrincipal.Text = "Kiosco";
             // 
             // lblFecha
             // 
@@ -109,7 +110,7 @@
             // 
             // txtPrecioU
             // 
-            txtPrecioU.Location = new Point(161, 184);
+            txtPrecioU.Location = new Point(161, 183);
             txtPrecioU.Name = "txtPrecioU";
             txtPrecioU.Size = new Size(110, 23);
             txtPrecioU.TabIndex = 9;
@@ -170,7 +171,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
-            ClientSize = new Size(337, 317);
+            ClientSize = new Size(351, 317);
             Controls.Add(lblResultado);
             Controls.Add(lstProducto);
             Controls.Add(btnCancelar);
@@ -183,8 +184,11 @@
             Controls.Add(lblFecha);
             Controls.Add(lblPrincipal);
             Controls.Add(btnAceptar);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmRegistro";
-            Text = "frmRegistro";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Registro";
             ((System.ComponentModel.ISupportInitialize)lstCantidad).EndInit();
             ResumeLayout(false);
             PerformLayout();
